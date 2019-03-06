@@ -6,10 +6,10 @@
 
   <v-layout row wrap>
   <v-flex class="xs12 md3">
-  <Versions :schema="schema"/>
+  <Versions :schema="schema" v-model="version"/>
   </v-flex>
     <v-flex class="xs12 md9">
-    <Properties :schema="schema"/>
+    <Properties :schema="schema" :version="version"/>
     </v-flex>
   </v-layout>
 </v-container>
@@ -27,7 +27,8 @@ export default {
     Properties
   },
   data: () => ({
-    schema: []
+    schema: [],
+    version: undefined,
   })
 
 }
