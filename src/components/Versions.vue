@@ -29,7 +29,7 @@ export default {
   }),
   watch: {
     schema: function () {
-      this.selectedVersion = undefined;
+      this.selectVersion(undefined)
       this.fetchVersions()
     }
   },
