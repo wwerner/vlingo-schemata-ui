@@ -1,6 +1,6 @@
 <template>
 
-<v-card>
+<v-card min-height="30rem">
   Versions for {{ schema }}
 </v-card>
 
@@ -15,5 +15,7 @@ export default {
 </script>
 
 <style>
-
+.v-card {
+  overflow-y: auto
+}
 </style>

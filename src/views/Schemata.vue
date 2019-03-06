@@ -5,10 +5,10 @@
   </v-flex>
 
   <v-layout row wrap>
-  <v-flex class="xs3">
+  <v-flex class="xs12 md3">
   <Versions :schema="schema"/>
   </v-flex>
-    <v-flex class="xs9">
+    <v-flex class="xs12 md9">
     <Properties :schema="schema"/>
     </v-flex>
   </v-layout>
