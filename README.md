@@ -1,4 +1,10 @@
+**WIP**
+
 # vlingo-schemata-ui
+
+Potential UI implementation for https://github.com/vlingo/vlingo-schemata.
+See https://github.com/vlingo/vlingo-schemata/blob/master/docs/vlingo-schemata-wireframes.pdf for mock ups.
+
 
 ## Project setup
 ```
