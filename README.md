@@ -5,7 +5,9 @@
 Potential UI implementation for https://github.com/vlingo/vlingo-schemata.
 See https://github.com/vlingo/vlingo-schemata/blob/master/docs/vlingo-schemata-wireframes.pdf for mock ups.
 
+Deployed to Zeit Now for easy review: https://vlingo-schemata-ui.now.sh/
 
+Build runs on CircleCI: https://circleci.com/gh/wwerner/vlingo-schemata-ui/
 
 * Project setup `npm install`
 * Compiles and hot-reloads for development `npm run serve`
