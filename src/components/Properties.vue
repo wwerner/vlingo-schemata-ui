@@ -8,7 +8,9 @@
     <v-tab>Description</v-tab>
 
     <!-- TODO: Factor out tab contents in separate components-->
-    <v-tab-item>Specification for {{ schema }} <span v-if="version">v{{ version }}</span></v-tab-item>
+    <v-tab-item>Specification for {{ schema }} <span v-if="version">v{{ version }}</span>
+    <code>{{ specification }}</code>
+    </v-tab-item>
     <v-tab-item>
       Status for {{ schema }}<span v-if="version">v{{ version }}</span>
       <v-list dense>
@@ -62,7 +64,16 @@ export default {
       // TODO: query an actual backend, this is just mock data
       if (this.schema === "com.google.search.adwords.events.AdWordsAudienceChosen" && this.version === "1.0.1") {
         this.status = ['Draft', 'Published']
-        this.specification = 'Foo'
+        this.specification = `event AdWordsAccountCreated {
+	type eventType
+	version eventVersion
+	timestamp ocurredOn
+	string accountId
+	string name
+	data.com.google.search.adwords.data.AccountData:2.0.0
+	int numberOfWords,
+	data.com.google.search.adwords.data.PaymentMethod:1.3.2
+}`
         this.description = '# Description\nAlso\n* supports\n* **Mark**_down_'
       } else if (this.schema === "com.google.search.adwords.events.AdWordsAudienceChosen" && this.version === "1.0.0") {
         this.status = ['Draft']
@@ -88,5 +99,11 @@ export default {
 <style>
 .v-card {
   overflow-y: auto
+}
+
+code {
+  width: 100%;
+  font-size: larger;
+  font-weight: lighter;
 }
 </style>
