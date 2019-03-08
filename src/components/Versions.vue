@@ -8,7 +8,7 @@
       v-for="version in versions" :key="version"
       @click="selectVersion(version)">
       <v-list-tile-action>
-        <v-icon color="primary">star</v-icon>
+        <v-icon :color="selectedVersion === version ? 'primary': ''">insert_drive_file</v-icon>
       </v-list-tile-action>
       <v-list-tile-content>
         <v-list-tile-title>{{ version }}</v-list-tile-title>
