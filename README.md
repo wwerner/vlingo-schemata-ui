@@ -7,6 +7,8 @@ See https://github.com/vlingo/vlingo-schemata/blob/master/docs/vlingo-schemata-w
 
 Deployed to Zeit Now for easy review: https://vlingo-schemata-ui.now.sh/
 
+The sample data for `com.google.search.adwords.events.AdWordsAudienceChosen v1.0.1` has the most details.
+
 Build runs on CircleCI: https://circleci.com/gh/wwerner/vlingo-schemata-ui/
 
 * Project setup `npm install`
