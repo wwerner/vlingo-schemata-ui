@@ -7,8 +7,23 @@
     <v-tab>Status</v-tab>
     <v-tab>Description</v-tab>
 
+    <!-- TODO: Factor out tab contents in separate components-->
     <v-tab-item>Specification for {{ schema }} <span v-if="version">v{{ version }}</span></v-tab-item>
-    <v-tab-item>Status for {{ schema }}<span v-if="version">v{{ version }}</span></v-tab-item>
+    <v-tab-item>
+      Status for {{ schema }}<span v-if="version">v{{ version }}</span>
+      <v-list dense>
+        <v-list-tile
+          v-for="s in status" :key="s"
+        >
+          <v-list-tile-action>
+            <v-icon :color="s === 'Published' ? 'primary' : ''">label</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>{{ s }}</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-tab-item>
     <v-tab-item>
       Description for {{ schema }} <span v-if="version">v{{ version }}</span>
       <div v-html="compiledDescription()"></div>
