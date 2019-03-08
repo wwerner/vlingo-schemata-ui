@@ -8,11 +8,13 @@
     <v-tab>Description</v-tab>
 
     <!-- TODO: Factor out tab contents in separate components-->
-    <v-tab-item>Specification for {{ schema }} <span v-if="version">v{{ version }}</span>
-    <code>{{ specification }}</code>
-    </v-tab-item>
+
     <v-tab-item>
-      Status for {{ schema }}<span v-if="version">v{{ version }}</span>
+      <code>{{ specification }}</code>
+      <v-chip class="right">Specification for {{ schema }} <span v-if="version">v{{ version }}</span></v-chip>
+    </v-tab-item>
+
+    <v-tab-item>
       <v-list dense>
         <v-list-tile
           v-for="s in status" :key="s"
@@ -25,10 +27,12 @@
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
+      <v-chip class="right">Status for {{ schema }}<span v-if="version">v{{ version }}</span></v-chip>
     </v-tab-item>
+
     <v-tab-item>
-      Description for {{ schema }} <span v-if="version">v{{ version }}</span>
       <div v-html="compiledDescription()"></div>
+      <v-chip class="right">Description for {{ schema }} <span v-if="version">v{{ version }}</span></v-chip>
     </v-tab-item>
   </v-tabs>
   </v-card-text>
